@@ -1,40 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Facebook Login Form</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
     <div class="facebook-login-page">
-        <div class="intro">
-            <h1 class="facebook-header">facebook</h1>
-            <h3>
-                Facebook provides contact with people you
-                know
-            </h3>
-            <h3>
-                and share your memories.
-            </h3>
+      <div class="intro">
+        <h1 class="facebook-header">facebook</h1>
+        <h3>Facebook provides contact with people you know</h3>
+        <h3>and share your memories.</h3>
+      </div>
+      <div class="facebook-form">
+        <form>
+          <input
+            type="text"
+            placeholder="Email or Phone Number"
+            id="emailOrNumber"
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            id="facebook-password"
+            required
+          />
+          <button type="submit" id="facebook-login-button">Log in</button>
+          <small><a href="#">Forgot password?</a></small>
+          <div class="facebook-separator"></div>
+          <button type="button" id="new-account">Create new account</button>
+        </form>
+        <div class="footer-text">
+          <small>
+            <a href="#">Create a Page</a> for a celebrity, brand or business.
+          </small>
         </div>
-        <div class="facebook-form">
-            <form>
-                <input type="text" placeholder ="Email or Phone Number" id="emailOrNumber" required>
-                <input type="password" placeholder="Password" id="facebook-password" required>
-                <button type="submit" id="facebook-login-button">Log in</button>
-                <small><a href="#">Forgot password?</a></small>
-                <div class="facebook-separator"></div>
-                <button type="button" id="new-account">
-                    Create new account
-                </button>
-            </form>
-            <div class="footer-text">
-                <small>
-                    <a href="#">Create a Page</a> for a celebrity, brand or business.
-                </small>
-            </div>
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

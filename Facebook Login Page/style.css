@@ -1,5 +1,7 @@
-@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;1,300;1,400&family=Outfit:wght@400;700&family=Overpass:ital@1&family=Pacifico&family=Poppins:wght@100;300;400;500&family=Roboto+Condensed&display=swap");
-*, *::before, *::after {
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -15,142 +17,150 @@ button {
 }
 
 body {
+  font-family: "Poppins", sans-serif;
   display: flex;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
   padding: 1.25rem;
   -webkit-user-select: none;
-     -moz-user-select: none;
-          user-select: none;
+  -moz-user-select: none;
+  user-select: none;
   background: #f3f3f3;
 }
 
 .facebook-login-page {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 15vmin;
-    font-family: Arial, Helvetica, sans-serif;
-    padding-bottom: 15vmin;
-    font-family: Arial, Helvetica, sans-serif;
-  }
-  
-  .facebook-login-page > .intro :where(h1, h3) {
-    font-weight: 600;
-  }
-  .facebook-login-page > .intro h1 {
-    color: rgb(24, 119, 242);
-    line-height: 15vmin;
-    font-size: 8vmin;
-  }
-  .facebook-login-page > .intro h3 {
-    font-size: 3vmin;
-  }
-  
-  .facebook-login-page > .facebook-form > form {
-    border-radius: 8px;
-    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 15vmin;
+  padding-bottom: 15vmin;
+}
+
+.facebook-login-page > .intro :where(h1, h3) {
+  font-weight: 600;
+}
+.facebook-login-page > .intro h1 {
+  color: rgb(24, 119, 242);
+  line-height: 15vmin;
+  font-size: 8vmin;
+}
+.facebook-login-page > .intro h3 {
+  font-size: 3vmin;
+}
+
+.facebook-login-page > .facebook-form > form {
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  padding: 3vmin 4vmin;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 2vmin;
+  background-color: #fff;
+}
+.facebook-login-page
+  > .facebook-form
+  > form
+  :where(input, #facebook-login-button) {
+  height: 45px;
+  width: 350px;
+  border-radius: 4px;
+  padding: 1vmin 4vmin;
+}
+.facebook-login-page > .facebook-form > form > input {
+  border: 2px solid #ccc;
+  font-size: 2.5vmin;
+}
+.facebook-login-page > .facebook-form > form > input:focus {
+  border: 2px solid rgb(24, 119, 242);
+}
+.facebook-login-page > .facebook-form > form > input:focus::-moz-placeholder {
+  opacity: 0.7;
+}
+.facebook-login-page > .facebook-form > form > input:focus::placeholder {
+  opacity: 0.7;
+}
+.facebook-login-page > .facebook-form > form button#facebook-login-button {
+  background-color: rgb(24, 119, 242);
+  color: #fff;
+  font-size: 2.5vmin;
+  font-weight: 600;
+}
+.facebook-login-page > .facebook-form > form > small > a {
+  text-decoration: none;
+  font-size: 2vmin;
+  color: rgb(24, 119, 242);
+}
+.facebook-login-page > .facebook-form > form > .facebook-separator {
+  width: 100%;
+  height: 2px;
+  margin: 15px auto;
+  background-color: #ddd;
+}
+.facebook-login-page > .facebook-form > form button#new-account {
+  background-color: rgb(66, 183, 42);
+  color: #fff;
+  height: 45px;
+  width: 60%;
+  margin: auto;
+  border-radius: 4px;
+  transition: 0.2s;
+  font-size: 2vmin;
+  font-weight: 600;
+}
+.facebook-login-page > .facebook-form > form button#new-account:hover {
+  background-color: rgb(54, 164, 32);
+}
+.facebook-login-page > .facebook-form .footer-text {
+  text-align: center;
+  padding-top: 3vmin;
+}
+.facebook-login-page > .facebook-form .footer-text > small {
+  font-size: 2vmin;
+}
+.facebook-login-page > .facebook-form .footer-text > small > a {
+  font-weight: bold;
+  color: #000;
+  text-decoration: none;
+}
+
+@media (max-width: 850px) {
+  .facebook-login-page {
     text-align: center;
-    padding: 3vmin 4vmin;
-    display: flex;
     flex-direction: column;
-    gap: 2vmin;
-    background-color: #fff;
   }
-  .facebook-login-page > .facebook-form > form :where(input, #facebook-login-button) {
-    height: 45px;
-    width: 350px;
-    border-radius: 4px;
-    padding: 1vmin 4vmin;
+}
+@media (max-width: 500px) {
+  .facebook-login-page > .facebook-form > form {
+    padding: 1.5vmin 2.5vmin;
   }
-  .facebook-login-page > .facebook-form > form > input {
-    border: 2px solid #ccc;
-    font-size: 2.5vmin;
-  }
-  .facebook-login-page > .facebook-form > form > input:focus {
-    border: 2px solid rgb(24, 119, 242);
-  }
-  .facebook-login-page > .facebook-form > form > input:focus::-moz-placeholder {
-    opacity: 0.7;
-  }
-  .facebook-login-page > .facebook-form > form > input:focus::placeholder {
-    opacity: 0.7;
-  }
-  .facebook-login-page > .facebook-form > form button#facebook-login-button {
-    background-color: rgb(24, 119, 242);
-    color: #fff;
-    font-size: 2.5vmin;
-    font-weight: 600;
-  }
-  .facebook-login-page > .facebook-form > form > small > a {
-    text-decoration: none;
-    font-size: 2vmin;
-    color: rgb(24, 119, 242);
-  }
-  .facebook-login-page > .facebook-form > form > .facebook-separator {
-    width: 100%;
-    height: 2px;
-    margin: 15px auto;
-    background-color: #ddd;
+  .facebook-login-page
+    > .facebook-form
+    > form
+    :where(input, #facebook-login-button) {
+    height: 30px;
+    width: 240px;
   }
   .facebook-login-page > .facebook-form > form button#new-account {
-    background-color: rgb(66, 183, 42);
-    color: #fff;
-    height: 45px;
-    width: 60%;
-    margin: auto;
-    border-radius: 4px;
-    transition: 0.2s;
-    font-size: 2vmin;
-    font-weight: 600;
+    height: 22px;
+    width: 50%;
   }
-  .facebook-login-page > .facebook-form > form button#new-account:hover {
-    background-color: rgb(54, 164, 32);
+  .facebook-login-page > .facebook-form > form > .facebook-separator {
+    margin: 5px auto;
   }
-  .facebook-login-page > .facebook-form .footer-text {
+}
+@media (min-width: 1100px) {
+  .facebook-login-page > .facebook-form > form {
     text-align: center;
-    padding-top: 3vmin;
   }
-  .facebook-login-page > .facebook-form .footer-text > small {
-    font-size: 2vmin;
+  .facebook-login-page
+    > .facebook-form
+    > form
+    :where(input, #facebook-login-button, #new-account) {
+    height: 50px;
   }
-  .facebook-login-page > .facebook-form .footer-text > small > a {
-    font-weight: bold;
-    color: #000;
-    text-decoration: none;
+  .facebook-login-page > .facebook-form > form button#new-account {
+    height: 50px;
   }
-
-  @media (max-width: 850px) {
-    .facebook-login-page {
-      text-align: center;
-      flex-direction: column;
-    }
-  }
-  @media (max-width: 500px) {
-    .facebook-login-page > .facebook-form > form {
-      padding: 1.5vmin 2.5vmin;
-    }
-    .facebook-login-page > .facebook-form > form :where(input, #facebook-login-button) {
-      height: 30px;
-      width: 240px;
-    }
-    .facebook-login-page > .facebook-form > form button#new-account {
-      height: 22px;
-      width: 50%;
-    }    
-    .facebook-login-page > .facebook-form > form > .facebook-separator {
-      margin: 5px auto;
-    }
-  }
-  @media (min-width: 1100px) {
-    .facebook-login-page > .facebook-form > form {
-      text-align: center;
-    }
-    .facebook-login-page > .facebook-form > form :where(input, #facebook-login-button, #new-account) {
-      height: 50px;
-    }
-    .facebook-login-page > .facebook-form > form button#new-account {
-      height: 50px;
-    }
-  }
+}
